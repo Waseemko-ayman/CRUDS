@@ -1,0 +1,245 @@
+/* Start Variable */
+:root {
+    --main-color: #111;
+    --second-color: white;
+    --third-color: #2d2d2d;
+    --background-color: #fffaf7;
+    --main-transition: 0.5s;
+    --section-padding: 50px;
+    --section-padding: 50px;
+    --main-font: 'Courgette', cursive;
+    --font-weight: normal;
+    /* padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding); */
+}
+
+/* End Variable */
+
+/* Start Global Rules */
+* {
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: 'Playfair Display', serif; */
+    background-color: #222;
+    color: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* FrameWork */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.between-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* FrameWork */
+
+/* اعملت هاي علشان بدي اللون اللي ورا يملا الشاشة لكن الكونتنت اللي ورا تملا من الاول للاخر */
+.container {
+    /* كتبنا ال بادنك علشان الكلام في نسخة الموبايل ما يبلش من اول الشاشة */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* علشان الكونتينر يمسك العناصر في النص */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small screens */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/******************************************************************************************************/
+/* Start Head */
+.page .head {
+    color: var(--second-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.page .head h1 {
+    font-size: 35px;
+    margin: 0;
+}
+
+.page .head p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* End Head */
+
+/******************************************************************/
+
+/* Start inputs */
+.page .inputs {
+    max-width: 100%;
+    width: 100%;
+}
+
+.page .inputs input,
+.page .inputs button,
+.outputs .searchBlock input,
+#deleteAll button {
+    max-width: 100%;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    transition: var(--main-transition);
+}
+
+.page .inputs input,
+.outputs .searchBlock input {
+    color: var(--second-color);
+    background-color: var(--main-color);
+    padding: 0 8px;
+}
+
+.page .inputs input:focus,
+.outputs .searchBlock input:focus {
+    outline: none;
+    background-color: #000;
+    transform: scale(1.1);
+}
+
+.page .inputs input::placeholder,
+.outputs .searchBlock input::placeholder {
+    font-size: 15px;
+}
+
+.page .inputs .price {
+    gap: 8px;
+}
+
+@media (max-width: 767px) {
+    .page .inputs .price {
+        flex-direction: column;
+    }
+}
+
+.page .inputs .price p {
+    position: relative;
+    color: var(--main-color);
+    background-color: yellow;
+    margin-bottom: 10px;
+    max-width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.page .inputs .price p::before {
+    content: "Total: ";
+}
+
+.page .inputs button,
+.outputs .btnSearch button,
+#deleteAll button {
+    color: var(--main-color);
+    background-color: yellow;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: var(--main-transition);
+}
+
+.page .inputs button:hover,
+.outputs .btnSearch button:hover,
+#deleteAll button:hover {
+    background-color: rgba(255, 255, 0, 0.829);
+    letter-spacing: 2px;
+}
+/* End inputs */
+
+
+/* Start Outputs */
+.outputs .btnSearch button {
+    border: none;
+    width: 45%;
+    height: 40px;
+}
+
+.outputs table {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.outputs table th {
+    text-transform: uppercase;
+}
+
+.outputs table th,
+.outputs table td {
+    padding: 5px;
+}
+
+.outputs table button {
+    color: var(--main-color);
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: yellow;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.outputs table button:hover {
+    background-color: rgba(255, 255, 0, 0.829);
+}
+/* End Outputs */
+
+#deleteAll {
+    margin: 15px 0;
+}
+
+
+
+
+
+

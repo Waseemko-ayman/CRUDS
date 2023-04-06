@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize ربط ملف ال -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Font Awessome Library -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Courgette&family=Dancing+Script:wght@400;600;700&family=Kaushan+Script&family=Lobster&family=Playfair+Display:wght@400;500;600;700;800;900&family=Roboto:wght@500&family=Satisfy&family=Staatliches&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- tab image -->
+    <!-- <link rel="shortcut icon" href="#"> -->
+    <!-- css ربط ملف ال -->
+    <link rel="stylesheet" href="../css/CRUDS.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="head">
+                <h1>Cruds</h1>
+                <p>Product Management System</p>
+            </div>
+            <div class="inputs">
+                <input type="text" id="title" placeholder="Title">
+                <div class="price flex">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+                    <p class="flex" id="total"></p>
+                </div>
+                <input type="number" id="count" placeholder="Count">
+                <input type="text" id="category" placeholder="Category">
+                <button id="submit">Create</button>
+            </div>
+            <div class="outputs">
+                <div class="searchBlock">
+                    <input type="text" onkeyup="searchData(this.value)" id="search" placeholder="Search">
+                    <div class="btnSearch between-flex">
+                        <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                        <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+                    </div>
+                </div>
+                <div id="deleteAll">
+                    
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Taxes</th>
+                            <th>Ads</th>
+                            <th>Discount</th>
+                            <th>Total</th>
+                            <th>Category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Js/CRUDS.js"></script>
+</body>
+</html>
